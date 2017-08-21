@@ -1,5 +1,5 @@
-var repair = document.getElementById("repair-header");
-var priceList = [
+const repair = document.getElementById("repair-header");
+const priceList = [
   {
     name: 'Ламинат',
     price: '408.75'
@@ -33,15 +33,15 @@ var priceList = [
     price: '309.96'
   },
 ];
-for (var i = 0; i < priceList.length; i++) {
-  var newDiv = document.createElement('div');
-  newDiv.className = 'row';
-  repair.appendChild(newDiv);
+for (let i = 0; i < priceList.length; i++) {
+  let rowElement = document.createElement('div');
+  rowElement.className = 'row';
+  repair.appendChild(rowElement);
   
-  for (var key in priceList[i]) {
-    var newEl = document.createElement('div');
-    newEl.innerHTML = priceList[i][key];
-    newEl.className = 'col-md-4';
-    newDiv.appendChild(newEl);
+  for (let key in priceList[i]) {
+    let colElement = document.createElement('div');
+    colElement.innerHTML = priceList[i][key];
+    colElement.className = 'col-md-4';
+    rowElement.appendChild(colElement);
   }
 }
